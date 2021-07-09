@@ -1,6 +1,9 @@
 ---
+docker_repo: https://download.docker.com/linux/centos/docker-ce.repo
+docker_gpg_key: https://download.docker.com/linux/centos/gpg
+
 docker_packages:
-  - docker
+  - docker-ce
   - docker-compose
   - python-pip
   - python-devel        # Used when installing pip packages
@@ -8,10 +11,12 @@ docker_packages:
   - libffi-devel        # Used when installing pip packages
 
 docker_pip_packages:
+  - setuptools==44.1.1
+  - websocket-client==0.59.0
   - zipp<=1.2
   - configparser<=4.0
   - bcrypt<=3.1.7
   - pyrsistent==0.16.1
   - jsonschema==3.0.2
-  - docker
+  - docker==4.4.4
   - docker-compose==1.26.2
